@@ -43,7 +43,7 @@ public class CellPhoneApplication {
 
         cellPhone1.dial(cellPhone2.getPhoneNumber());
         cellPhone2.dial(cellPhone1.getPhoneNumber());
-        cellPhone3.dial(cellPhone2.getPhoneNumber());
+        cellPhone3.dial(cellPhone2);
 
         display(cellPhone1);
         display(cellPhone2);
@@ -54,6 +54,7 @@ public class CellPhoneApplication {
     public static void display(CellPhone Phone){
             System.out.printf("Owner: %s\n", Phone.getOwner());
             System.out.printf("Phone Number: %s\n", Phone.getPhoneNumber());
+
     }
 
 
