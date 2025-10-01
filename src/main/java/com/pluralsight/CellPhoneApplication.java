@@ -27,7 +27,7 @@ public class CellPhoneApplication {
         String owner = input.next().trim();
         Phone.setOwner(owner);
 
-        System.out.printf("Serial Number: %d\nCell Model: %s\nCarrier: %s\nPhone Number:\n%s Owner: %s",serialNumber,model,carrier,phoneNum,owner);
+        System.out.printf("Serial Number: %d\nCell Model: %s\nCarrier: %s\nPhone Number:%s\nOwner: %s",serialNumber,model,carrier,phoneNum,owner);
 
 
     }
