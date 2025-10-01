@@ -27,8 +27,32 @@ public class CellPhoneApplication {
         String owner = input.next().trim();
         Phone.setOwner(owner);
 
-        System.out.printf("Serial Number: %d\nCell Model: %s\nCarrier: %s\nPhone Number:%s\nOwner: %s",serialNumber,model,carrier,phoneNum,owner);
+        System.out.printf("Serial Number: %d\nCell Model: %s\nCarrier: %s\nPhone Number: %s\nOwner: %s",serialNumber,model,carrier,phoneNum,owner);
 
+        System.out.println(Phone.getOwner());
+
+        CellPhone cellPhone1 = new CellPhone();
+        cellPhone1.setOwner("Danna Wyatt");
+        cellPhone1.setPhoneNumber("808-555-3000");
+
+        CellPhone cellPhone2 = new CellPhone();
+        cellPhone2.setOwner("John Debby");
+        cellPhone2.setPhoneNumber("412-565-1234");
+
+        cellPhone1.dial(cellPhone2.getPhoneNumber());
+        cellPhone2.dial(cellPhone1.getPhoneNumber());
+
+        display(cellPhone1);
+        display(cellPhone2);
 
     }
+    public static void display(CellPhone Phone){
+            System.out.printf("Owner: %s\n", Phone.getOwner());
+            System.out.printf("Phone Number: %s\n", Phone.getPhoneNumber());
+    }
+
+
+
+
+
 }
